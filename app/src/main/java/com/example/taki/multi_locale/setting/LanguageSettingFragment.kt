@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taki.multi_locale.databinding.FragmentLanguageSettingBinding
+import com.example.taki.multi_locale.preference.LanguagePreference
 import com.example.taki.multi_locale.setting.menu.Language
 
 class LanguageSettingFragment : Fragment() {
@@ -24,9 +25,12 @@ class LanguageSettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = SettingRecyclerViewAdapter(Language.values().first().code).apply {
+        val languagePreference = LanguagePreference(activity!!)
+
+        val adapter = SettingRecyclerViewAdapter(languagePreference.getLanguage().code).apply {
             itemClickListener = { _, item ->
                 val selectedLanguage = item as Language
+                languagePreference.setLanguage(selectedLanguage)
             }
 
             submitList(Language.values().toList())
