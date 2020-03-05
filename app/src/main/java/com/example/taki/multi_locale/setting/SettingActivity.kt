@@ -1,6 +1,7 @@
 package com.example.taki.multi_locale.setting
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -10,9 +11,14 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.taki.multi_locale.R
 import com.example.taki.multi_locale.databinding.ActivitySettingBinding
+import com.example.taki.multi_locale.extention.updateBaseContextLocale
 
 class SettingActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySettingBinding
+
+    override fun attachBaseContext(newBase: Context?) {
+        super.attachBaseContext(newBase?.updateBaseContextLocale())
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,11 +1,13 @@
 package com.example.taki.multi_locale.setting
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.taki.multi_locale.MainActivity
 import com.example.taki.multi_locale.databinding.FragmentLanguageSettingBinding
 import com.example.taki.multi_locale.preference.LanguagePreference
 import com.example.taki.multi_locale.setting.menu.Language
@@ -31,6 +33,14 @@ class LanguageSettingFragment : Fragment() {
             itemClickListener = { _, item ->
                 val selectedLanguage = item as Language
                 languagePreference.setLanguage(selectedLanguage)
+
+                //TODO onConfigurationChanged()を使ってすべてのActivityをrecreateする
+//                activity?.recreate()
+
+                activity?.let {
+                    //TODO クリア前の画面までのヒストリーを再現する
+                    MainActivity.back(it)
+                }
             }
 
             submitList(Language.values().toList())
