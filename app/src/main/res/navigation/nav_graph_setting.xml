@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/setting"
         android:name="com.example.taki.multi_locale.SettingFragment"
-        android:label="fragment_setting">
+        android:label="設定">
 
         <action
             android:id="@+id/navigate_to_language_setting"
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/language_setting"
         android:name="com.example.taki.multi_locale.LanguageSettingFragment"
-        android:label="fragment_language_setting"
+        android:label="言語設定"
         tools:layout="@layout/fragment_setting" />
 
 </navigation>
