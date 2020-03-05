@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting">設定</string>
+    <string name="language">言語</string>
+    <string name="language_setting">言語設定</string>
+    <string name="multi_locale">多言語化</string>
+</resources>

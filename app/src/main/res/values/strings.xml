@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">multi-locale</string>
+    <string name="app_name" translatable="false">multi-locale</string>
 
-    <string name="language_key">language</string>
+    <string name="language_key" translatable="false">language</string>
+
+    <string name="setting">Setting</string>
+    <string name="language">Language</string>
+    <string name="language_setting">Language Setting</string>
+    <string name="multi_locale">Multi Locale</string>
 </resources>

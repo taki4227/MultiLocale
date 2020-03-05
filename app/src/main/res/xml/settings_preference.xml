@@ -4,12 +4,12 @@
 
     <PreferenceCategory
         android:layout="@layout/custom_preference_category"
-        android:title="設定"
+        android:title="@string/setting"
         app:iconSpaceReserved="false">
 
         <Preference
             android:key="@string/language_key"
-            android:title="言語"
+            android:title="@string/language"
             app:iconSpaceReserved="false" />
 
     </PreferenceCategory>
