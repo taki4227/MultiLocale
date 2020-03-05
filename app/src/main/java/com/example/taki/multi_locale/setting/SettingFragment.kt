@@ -1,9 +1,10 @@
-package com.example.taki.multi_locale
+package com.example.taki.multi_locale.setting
 
 import android.os.Bundle
 import androidx.navigation.fragment.findNavController
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
+import com.example.taki.multi_locale.R
 
 class SettingFragment : PreferenceFragmentCompat() {
 

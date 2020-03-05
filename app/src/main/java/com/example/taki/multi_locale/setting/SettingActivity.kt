@@ -1,4 +1,4 @@
-package com.example.taki.multi_locale
+package com.example.taki.multi_locale.setting
 
 import android.app.Activity
 import android.content.Intent
@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.taki.multi_locale.R
 import com.example.taki.multi_locale.databinding.ActivitySettingBinding
 
 class SettingActivity : AppCompatActivity() {
@@ -16,7 +17,9 @@ class SettingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_setting)
+        binding = DataBindingUtil.setContentView(this,
+            R.layout.activity_setting
+        )
 
         val navController = findNavController(R.id.nav_fragment)
         val appBarConfiguration = AppBarConfiguration(navController.graph)

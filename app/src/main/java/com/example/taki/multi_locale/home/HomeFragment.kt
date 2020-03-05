@@ -1,4 +1,4 @@
-package com.example.taki.multi_locale
+package com.example.taki.multi_locale.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
