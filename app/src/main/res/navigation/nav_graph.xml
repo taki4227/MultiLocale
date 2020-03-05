@@ -8,7 +8,18 @@
     <fragment
         android:id="@+id/fragment_home"
         android:name="com.example.taki.multi_locale.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="多言語化"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/navigate_to_language_setting"
+            app:destination="@id/language_setting" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/language_setting"
+        android:name="com.example.taki.multi_locale.setting.LanguageSettingFragment"
+        android:label="言語設定"
+        tools:layout="@layout/fragment_language_setting" />
 
 </navigation>
